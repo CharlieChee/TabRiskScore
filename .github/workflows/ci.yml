@@ -1,0 +1,17 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with: python-version: "3.10"
+    - run: |
+        pip install poetry
+        poetry install --no-interaction
+        poetry run pre-commit run --all-files
+        poetry run pytest --maxfail=1 --disable-warnings -q
+

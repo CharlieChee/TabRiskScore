@@ -1,0 +1,7 @@
+site_name: TabRiskScore
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - Measures: measures.md
+  - Normalizers: normalizers.md
+
