@@ -1,0 +1,8 @@
+# config.yaml
+adult_dir: "data/adult"
+k: 2
+top_n: 5
+mia_params:
+  epsilon: 0
+  n_original: 100
+  n_synth: 100

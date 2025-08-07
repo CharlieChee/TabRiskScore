@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: optimqbs
+Version: 0.1.0
+Summary: Querysnout package for optimized QBS and helpers
+Author: Your Name
+Author-email: you@example.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+Dynamic: summary

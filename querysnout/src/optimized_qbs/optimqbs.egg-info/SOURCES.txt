@@ -1,0 +1,9 @@
+setup.py
+optimqbs/__init__.py
+optimqbs/cqbsmodule.c
+optimqbs/qbs.c
+optimqbs/qbs.py
+optimqbs.egg-info/PKG-INFO
+optimqbs.egg-info/SOURCES.txt
+optimqbs.egg-info/dependency_links.txt
+optimqbs.egg-info/top_level.txt

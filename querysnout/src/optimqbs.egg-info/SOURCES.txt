@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/helpers/__init__.py
+src/helpers/generation_logger.py
+src/helpers/nice.py
+src/helpers/utils.py
+src/optimqbs.egg-info/PKG-INFO
+src/optimqbs.egg-info/SOURCES.txt
+src/optimqbs.egg-info/dependency_links.txt
+src/optimqbs.egg-info/top_level.txt

@@ -2,17 +2,48 @@
 name = "tabriskscore"
 version = "0.1.0"
 description = "A framework for quantifying privacy risks of synthetic tabular data"
-authors = [
-    {name = "Changlong Ji"}
-]
-license = {text = "MIT"}
+authors = [{ name = "Changlong Ji" }]
+license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9,<3.11"
+
+
 dependencies = [
-    "fastapi (>=0.115.12,<0.116.0)"
+  "fastapi>=0.115.12,<0.116.0",
+  "uvicorn[standard]>=0.34.2,<0.35.0",
+  "pluggy>=1.0",
+  "pydantic>=1.10,<2.0",
+  "typer>=0.9",
+  "jinja2>=3.1",
+  "weasyprint>=57.0",
+  "click<8.2.0",
+  "pandas~=1.5.1",
+
+ "private-pgm @ git+https://github.com/ryan112358/private-pgm.git@4152cc591f30560ce994870318ee4801b016bf94",
+
+  "reprosyn @ git+https://github.com/CharlieChee/reprosyn@main",
+  "aiofiles~=24.1.0",
+  "matplotlib~=3.6.2",
+  "nest_asyncio~=1.6.0",
+  "numpy~=1.23.4",
+  "scikit_learn~=1.1.3",
+  "scipy~=1.13.1",
+  "seaborn~=0.13.2",
+  "torch~=1.12.1",
+  "tqdm~=4.64.1",
 ]
 
-[tool.poetry]
+
+
+[tool.poetry.scripts]
+tabriskscore = "tabriskscore.cli:app"
+
+[tool.poetry.plugins."tabriskscore"]
+example = "tabriskscore.plugins.example"
+row_count     = "tabriskscore.plugins.row_count"
+similar_check = "tabriskscore.plugins.similar_check"
+lnb_wrapper   = "tabriskscore.plugins.lnb.lnb_plugin"
+
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
@@ -21,6 +52,9 @@ isort = "^6.0.1"
 mypy = "^1.15.0"
 pre-commit = "^4.2.0"
 
+
+[tool.poetry.dependencies]
+optimqbs = {develop = true}
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
